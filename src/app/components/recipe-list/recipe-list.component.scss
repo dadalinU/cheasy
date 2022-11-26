@@ -1,0 +1,47 @@
+.banner {
+    height: 20vh;
+    background-color: aquamarine;
+    padding: 10px;
+}
+
+.filter {
+    background-color: rgb(255, 212, 212);
+    padding: 10px;
+}
+
+.recipeRow {
+    background-color: rgb(238, 238, 238);
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 3fr 3fr 1fr;
+}
+
+.pictureList {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+}
+
+.pictureList img {
+    height: 20vw;
+}
+
+.titleList {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+
+.descriptionList {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+}
+
+.ratingList {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+}
+
+.addedList {
+    grid-column: 2 / 5;
+    grid-row: 3 / 4;
+}
