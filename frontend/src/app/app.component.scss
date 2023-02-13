@@ -1,4 +1,10 @@
-:host {
-  display: grid;
-  grid-template-rows: 15% 15%;
+// :host {
+//   display: grid;
+//   grid-template-rows: auto 1fr;
+// }
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
