@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RecipeDetailComponent } from './components/recipe-detail/recipe-detail.component';
-import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
-import { HeaderComponent } from './components/header/header.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { RecipeDetailComponent } from './components/recipe-list-item/recipe-list-item.component';
+import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
 import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
@@ -18,13 +18,10 @@ import { SearchComponent } from './components/search/search.component';
     HeaderComponent,
     FilterComponent,
     MenuComponent,
-    SearchComponent
+    SearchComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
