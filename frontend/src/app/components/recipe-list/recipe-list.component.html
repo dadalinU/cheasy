@@ -1,11 +1,8 @@
-<div>
-  <div class="recipeRow">
-    <div class="pictureList">
-      <img src="/assets/img/frevelsalat.jpg" />
-    </div>
-    <div class="titleList">Name</div>
-    <div class="descriptionList">Kategorie/Tags</div>
-    <div class="ratingList">Bewertung</div>
-    <div class="addedList">hinzugefügt am: 26.11.2022</div>
-  </div>
+<div *ngFor="let recipe of data">
+  <app-recipe-detail
+    [name]="recipe.name"
+    [category]="recipe.category"
+    [dateAdded]="recipe.dateAdded"
+    [rating]="recipe.rating"
+  ></app-recipe-detail>
 </div>
