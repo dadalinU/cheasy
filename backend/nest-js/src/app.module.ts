@@ -1,10 +1,19 @@
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
+import * as mongoose from 'mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 @Module({
-  imports: [],
+  imports: [MongooseModule.forRoot('mongodb://localhost:27017/')],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: 'DATABASE_CONNECTION',
+      useFactory: async (): Promise<typeof mongoose> =>
+        await mongoose.connect('mongodb://localhost/test'),
+    },
+  ],
 })
 export class AppModule {}
