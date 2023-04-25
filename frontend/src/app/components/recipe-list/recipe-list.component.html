@@ -1,8 +1,8 @@
 <div *ngFor="let recipe of data">
-  <app-recipe-detail
+  <app-recipe-list-item
     [name]="recipe.name"
     [category]="recipe.category"
     [dateAdded]="recipe.dateAdded"
     [rating]="recipe.rating"
-  ></app-recipe-detail>
+  ></app-recipe-list-item>
 </div>
