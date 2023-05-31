@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './recipe-list-item.component.html',
   styleUrls: ['./recipe-list-item.component.scss'],
 })
-export class RecipeDetailComponent implements OnInit {
+export class RecipeListItem implements OnInit {
   @Input() name = '';
   @Input() category = '';
   @Input() dateAdded = new Date();
